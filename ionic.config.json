@@ -1,0 +1,7 @@
+{
+  "name": "ceutec-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
