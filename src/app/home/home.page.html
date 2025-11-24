@@ -13,8 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <span>isActive:{{isActive()}}</span><br>
+    <span>firstname:{{firstName()}}</span><br>
+    <span>edad:{{age()}}</span><br>
+    <span>Sub Total:{{subTotal()}}</span><br>
+    <span>ISV 15%:{{taxes()}}</span><br>
+    <span>years:{{years()}}</span><br>
+    <span>loginData: {{loginData() | json }}</span><br>
+    <ion-button (click)="changeValues()" >Cambiar Valores</ion-button>
   </div>
 </ion-content>

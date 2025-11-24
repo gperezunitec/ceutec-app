@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ceutec-app',
+  appId: 'com.walletapp.ceutec',
+  appName: 'Dmovil2',
   webDir: 'www'
 };
 

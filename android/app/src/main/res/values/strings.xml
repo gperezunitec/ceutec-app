@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dmovil2</string>
+    <string name="title_activity_main">Dmovil2</string>
+    <string name="package_name">com.walletapp.ceutec</string>
+    <string name="custom_url_scheme">com.walletapp.ceutec</string>
+</resources>
