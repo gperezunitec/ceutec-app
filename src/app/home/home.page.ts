@@ -1,6 +1,6 @@
 import {Component, computed, OnInit, Signal, signal, WritableSignal} from '@angular/core';
 import {IonHeader, IonToolbar, IonTitle, IonContent, IonButton} from '@ionic/angular/standalone';
-import {LoginDto} from "../dtos/Login";
+import {LoginDto} from "../auth/dtos/Login";
 import {JsonPipe} from "@angular/common";
 
 @Component({
