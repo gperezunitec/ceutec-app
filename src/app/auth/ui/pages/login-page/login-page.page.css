@@ -1,0 +1,69 @@
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* Contenedor del input */
+.custom-input {
+  --background: #fff;
+  --border-radius: 10px;
+  --border-color: #e2e5ec;
+  --border-width: 1px;
+  --border-style: solid;
+  padding: 6px 10px;
+  margin-bottom: 14px;
+}
+
+.field-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.custom-input ion-input {
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.custom-input ion-input::placeholder {
+  color: #b5b6c3;
+}
+
+/* Enlace */
+.forgot-box {
+  text-align: right;
+  margin-top: 4px;
+}
+
+.forgot-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3d5afe;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+.btn-primary {
+  --background: #5424ff;
+  --background-hover: #451de0;
+  --border-radius: 10px;
+  margin-top: 26px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px;
+  color: #fff;
+}
+
+.form-errorMessage{
+  color: red;
+}
+
+.form-inputError {
+  border: 1px solid red;
+}

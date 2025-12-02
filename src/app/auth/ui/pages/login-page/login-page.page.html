@@ -1,38 +1,56 @@
-<h3>Inicio de Sesion</h3>
+<div class="logo-container" style="text-align: center; margin-bottom: 20px;">
+  <img ngSrc="../../images/LoginImage.png" alt="Logo" style="width: 120px; height: auto;" height="586" width="664">
+</div>
 
 
+<h3 class="title">Inicio de Sesión</h3>
 
-  <form>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
 
-    <!-- Campo correo -->
-    <ion-item>
-      <ion-label position="floating">Correo electrónico</ion-label>
-      <ion-input
-        type="email"
-        placeholder="Ingrese su correo">
-      </ion-input>
-    </ion-item>
+  <!-- Campo correo -->
+  <ion-item>
+    <ion-label position="stacked" class="field-label">Correo electrónico</ion-label>
+    <ion-input
+      formControlName="email"
+      [ngClass]="{'form-inputError':isEmailRequired||isEmailInvalid}"
+      type="email"
+      placeholder="Ingrese su correo">
+    </ion-input>
+  </ion-item>
 
-    <!-- Campo contraseña -->
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input
-        type="password"
-        placeholder="Ingrese su contraseña">
-      </ion-input>
-    </ion-item>
+  @if (isEmailRequired){
+    <ion-note color="danger">El correo es requerido</ion-note>
+  }
+  @if (isEmailInvalid){
+    <ion-note color="danger">El correo no es valido</ion-note>
+  }
 
-    <!-- Enlace debajo de contraseña -->
-    <div style="text-align: right; margin-top: 6px;">
-      <a href="#" style="font-size: 14px; color: #3b49df;">
-        Olvidaste tu contraseña
-      </a>
-    </div>
+  <!-- Campo contraseña -->
+  <ion-item>
+    <ion-label position="stacked" class="field-label">Contraseña</ion-label>
+    <ion-input
+      formControlName="password"
+      [ngClass]="{'form-inputError':isPasswordRequired}"
+      type="password"
+      placeholder="Ingrese su contraseña">
+    </ion-input>
+  </ion-item>
 
-    <!-- Botón ingresar -->
-    <ion-button expand="block" color="primary" style="margin-top: 20px;">
-      Ingresar
-    </ion-button>
+  @if (isPasswordRequired){
+    <ion-note color="danger">El password es requerido</ion-note>
+  }
 
-  </form>
+  <!-- Enlace debajo de contraseña -->
+  <div class="forgot-box">
+    <a href="#" class="forgot-link">Olvidaste tu contraseña</a>
+  </div>
 
+  <!-- Botón ingresar -->
+  <ion-button [disabled]="isFormInvalid" type="submit" expand="block" class="btn-primary">
+    Ingresar
+  </ion-button>
+  <div class="register-box" style="text-align: center; margin-top: 10px;">
+    <a href="/register-page" class="register-link">Regístrate ahora</a>
+  </div>
+
+</form>
