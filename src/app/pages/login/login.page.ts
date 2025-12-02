@@ -8,7 +8,7 @@ import {IonButton, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/ang
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton]
+  imports: [ CommonModule, FormsModule, IonButton]
 })
 export class LoginPage implements OnInit {
 

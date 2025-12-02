@@ -2,12 +2,14 @@ import {Component, computed, OnInit, Signal, signal, WritableSignal} from '@angu
 import {IonHeader, IonToolbar, IonTitle, IonContent, IonButton} from '@ionic/angular/standalone';
 import {LoginDto} from "../auth/dtos/Login";
 import {JsonPipe} from "@angular/common";
+import {LoginPage} from "../pages/login/login.page";
+import {LoginPagePage} from "../auth/ui/pages/login-page/login-page.page";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, JsonPipe, IonButton],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, JsonPipe, IonButton, LoginPage, LoginPagePage],
 })
 export class HomePage implements OnInit {
 
