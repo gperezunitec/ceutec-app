@@ -1,13 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register-page</ion-title>
-  </ion-toolbar>
-</ion-header>
+<h3 className="title">Crear Cuenta</h3>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register-page</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+
+
+  <ion-item>
+    <ion-label position="stacked" class="field-label">Nombre Completo</ion-label>
+    <ion-input
+      formControlName="name"
+      type="text"
+      placeholder="Ingrese su Nombre">
+    </ion-input>
+  </ion-item>
+
+
+
+
+
+<ion-item>
+  <ion-label position="stacked" class="field-label">Correo electrónico</ion-label>
+  <ion-input
+    formControlName="email"
+    type="email"
+    placeholder="Ingrese su correo"
+    [ngClass]="{'form-inputError':isEmailRequired||isEmailInvalid}">
+  </ion-input>
+</ion-item>
+
+  @if (isEmailRequired){
+    <ion-note color="danger">El correo es requerido</ion-note>
+  }
+  @if (isEmailInvalid){
+    <ion-note color="danger">El correo no es valido</ion-note>
+  }
+
+
+  <ion-item>
+    <ion-label position="stacked" class="field-label">Contraseña</ion-label>
+    <ion-input
+      formControlName="password"
+      [ngClass]="{'form-inputError':isPasswordRequired}"
+      type="password"
+      placeholder="Ingrese su contraseña">
+    </ion-input>
+  </ion-item>
+
+  @if (isPasswordRequired){
+    <ion-note color="danger">El password es requerido</ion-note>
+  }
+
+
+
+  <ion-item>
+    <ion-label position="stacked" class="field-label">Numero de Telefono</ion-label>
+    <ion-input
+      formControlName="phone"
+      type="text"
+      placeholder="Ingrese su Numero de telefono">
+    </ion-input>
+  </ion-item>
+
+
+  <div class="checkbox-container">
+    <ion-checkbox formControlName="terms"></ion-checkbox>
+    <label class="checkbox-label">
+      Acepto los términos y condiciones y la política de privacidad.
+    </label>
+  </div>
+
+
+  <ion-button [disabled]="isFormInvalid" expand="block" type="submit" class="submit-btn">
+    Crear mi cuenta
+  </ion-button>
+
+  <div class="register-box" style="text-align: center; margin-top: 10px;">
+    <a href="/login-page" class="register-link">Ya tengo Cuenta</a>
+  </div>
+
+</form>
