@@ -20,6 +20,7 @@ photos:WritableSignal<PhotoDto[]>=signal<PhotoDto[]>([]);
 getPhotos():void{
   this._http.get<PhotoDto[]>(API_URL).subscribe({
     next:(photos: PhotoDto[]) => {
+      console.log(photos);
       this.photos.set(photos);
       this.showToast('Estas son tus fotos');
     },
