@@ -1,6 +1,4 @@
-<div class="logo-container" style="text-align: center; margin-bottom: 20px;">
-  <img ngSrc="../../images/LoginImage.png" alt="Logo" style="width: 120px; height: auto;" height="586" width="664">
-</div>
+
 
 
 <h3 class="title">Inicio de Sesión</h3>
@@ -11,7 +9,7 @@
   <ion-item>
     <ion-label position="stacked" class="field-label">Correo electrónico</ion-label>
     <ion-input
-      formControlName="email"
+      formControlName="identifier"
       [ngClass]="{'form-inputError':isEmailRequired||isEmailInvalid}"
       type="email"
       placeholder="Ingrese su correo">

@@ -13,6 +13,7 @@ import {
   IonToolbar
 } from '@ionic/angular/standalone';
 import {IonicModule} from "@ionic/angular";
+import {LoginDto} from "../../../dtos/login.dto";
 
 @Component({
   selector: 'app-register-page',
@@ -24,6 +25,9 @@ import {IonicModule} from "@ionic/angular";
 export class RegisterPagePage  {
 
   private readonly formBuilder:FormBuilder=inject(FormBuilder);
+
+
+
   registerForm:FormGroup=this.formBuilder.group({
     name:['', Validators.required],
     email:['', [Validators.required, Validators.email]],
@@ -57,5 +61,10 @@ export class RegisterPagePage  {
   onSubmit():void {
 
   }
+
+
+
+
+
 
 }
