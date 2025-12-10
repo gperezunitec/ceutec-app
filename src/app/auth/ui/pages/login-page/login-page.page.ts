@@ -1,12 +1,14 @@
 import {Component, inject, OnInit, signal, WritableSignal} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {IonContent, IonHeader, IonTitle, IonToolbar, ModalController} from '@ionic/angular/standalone';
 import {IonicModule, LoadingController} from "@ionic/angular";
 import {authGuard} from "../../../../shared/guards/auth-guard";
 import {AuthService} from "../../../services/auth.service";
 import {PhotoDto} from "../../../dtos/photo.dto";
 import {LoginDto} from "../../../dtos/login.dto";
+import {ForgotPasswordComponent} from "../../components/forgot-password/forgot-password.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -19,6 +21,8 @@ export class LoginPagePage {
 
   private readonly _authService: AuthService=inject(AuthService);
   private readonly formBuilder:FormBuilder=inject(FormBuilder);
+  private readonly router: Router = inject(Router);
+  private readonly modalController = inject(ModalController);
   private readonly loadingController: LoadingController = inject(LoadingController);
   loading: WritableSignal<HTMLIonLoadingElement | null> = signal(null);
 
@@ -70,6 +74,30 @@ get isEmailRequired():boolean{
         await this.loading()?.dismiss();
       }, 5000);
     }
+  }
+
+
+
+  // Modal
+  async openForgotPasswordModal() {
+    const modal = await this.modalController.create({
+      component: ForgotPasswordComponent,
+      initialBreakpoint: 0.85,
+      breakpoints: [0, 0.85],
+      mode: 'ios'
+    });
+
+    await modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'sent') {
+      console.log('Correo enviado desde el modal:', data);
+    }
+  }
+
+  goToRegister(): void {
+    this.router.navigate(['/register-page']);
   }
 
 
