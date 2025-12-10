@@ -72,7 +72,7 @@ get isEmailRequired():boolean{
 
       setTimeout(async () => {
         await this.loading()?.dismiss();
-      }, 5000);
+      }, 1000);
     }
   }
 

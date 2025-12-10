@@ -11,7 +11,7 @@ import {TokenResponseDto} from "../dtos/token-response.dto";
 
 
 const API_URL = `${environment.API_URL}photos`;
-const API_URL2 = `${environment.API_URL}auth/`;
+const API_URL2 = `${environment.API_URL}`;
 
 
 @Injectable({
@@ -27,15 +27,16 @@ private readonly _toastController:ToastController=inject(ToastController);
 photos:WritableSignal<PhotoDto[]>=signal<PhotoDto[]>([]);
 
 login(model:LoginDto):void{
-  this._http.post<TokenResponseDto>(`${API_URL2}login`,model).subscribe({
-    next:(response:TokenResponseDto)=> {
+  this._http.post<TokenResponseDto>(`${API_URL2}auth/login`,model).subscribe({
+    next:async (response:TokenResponseDto)=> {
       this._preferencesService.set('accessToken', response.accessToken);
-      this.showToast('Inicio de sesión exitoso');
+      await this.showToast('Inicio de sesión exitoso');
       this._router.navigate(['/home']);
 
     },
-    error:()=>{
-      this.showToast('Error al iniciar sesion');
+    error: async (err) => {
+      console.error('Error en el login:', err);
+      await this.showToast('Error al iniciar sesion', true);
     },
   });
 }
