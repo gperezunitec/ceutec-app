@@ -36,13 +36,13 @@ export class LoginPagePage {
   photos:WritableSignal<PhotoDto[]>=this._authService.photos;
 
 get isEmailRequired():boolean{
-  const emailControl=this.loginForm.get('email');
+  const emailControl=this.loginForm.get('identifier');
   return emailControl?emailControl.hasError('required')&& emailControl.touched:false;
 }
 
 
   get isEmailInvalid():boolean{
-    const emailControl=this.loginForm.get('email');
+    const emailControl=this.loginForm.get('identifier');
     return emailControl?emailControl.hasError('email')&& emailControl.touched:false;
   }
 
@@ -60,7 +60,9 @@ get isEmailRequired():boolean{
 
   async onSubmit(): Promise<void> {
     if (!this.isFormInvalid) {
+
       const login: LoginDto = this.loginForm.value as LoginDto;
+      console.log('Datos de login:', login);
       this.loading.set(
         await this.loadingController.create({
           message: 'Iniciando sesión...',

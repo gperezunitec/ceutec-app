@@ -7,15 +7,16 @@ import { AppComponent } from './app/app.component';
 import {provideHttpClient} from "@angular/common/http";
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getMessaging, provideMessaging } from '@angular/fire/messaging';
-import {environments} from "eslint-plugin-import";
-import {environment} from "./environments/environment";
+import {environment} from "./environments/environment.prod";
+
+
 
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    provideHttpClient(), provideFirebaseApp(() => initializeApp()
-    ), provideMessaging(() => getMessaging(environment.FIREBASE_CONFIG)),
+    provideHttpClient(), provideFirebaseApp(() => initializeApp(environment.FIREBASE_CONFIG)
+    ), provideMessaging(() => getMessaging()),
   ],
 });

@@ -11,7 +11,7 @@ import {TokenResponseDto} from "../dtos/token-response.dto";
 
 
 const API_URL = `${environment.API_URL}photos`;
-const API_URL2 = `${environment.API_URL}`;
+const API_URL2 = `${environment.API_URL2}`;
 
 
 @Injectable({
