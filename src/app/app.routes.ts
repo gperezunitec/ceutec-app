@@ -48,7 +48,7 @@ export const routes: Routes = [
 
   {
     path: 'tabs',
-    loadComponent: () => import('./shared/pages/tabs/tabs.page').then( m => m.TabsPage)
+    loadChildren: () => import('./shared/pages/tabs/tabs.routes').then(m => m.routes)
   },
 
 

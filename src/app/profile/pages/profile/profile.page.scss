@@ -1,0 +1,94 @@
+.perfil-container {
+  max-width: 380px;
+  margin: auto;
+  padding: 16px;
+  font-family: system-ui, sans-serif;
+}
+
+.titulo {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.avatar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #6c63ff;
+}
+
+.check {
+  position: absolute;
+  bottom: 5px;
+  right: 40%;
+  background: #2ecc71;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+.nombre {
+  text-align: center;
+  font-weight: 600;
+}
+
+.fecha {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.campo label {
+  font-size: 12px;
+  color: #777;
+}
+
+.campo input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn-guardar {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background: #5b2bbf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn-cerrar {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background: #a73434;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
