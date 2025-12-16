@@ -1,7 +1,16 @@
 import {Component, inject, OnInit, WritableSignal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {
+  IonAvatar,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonList,
+  IonTitle,
+  IonToolbar
+} from '@ionic/angular/standalone';
 import {ActionPerformed, PushNotifications, PushNotificationSchema, Token} from "@capacitor/push-notifications";
 import {UserDto} from "../profile/dtos/user";
 import {UserService} from "../profile/services/user-service";
@@ -11,7 +20,7 @@ import {UserService} from "../profile/services/user-service";
   templateUrl: './home-page.page.html',
   styleUrls: ['./home-page.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonIcon, IonItem, IonAvatar]
 })
 export class HomePagePage implements OnInit {
 

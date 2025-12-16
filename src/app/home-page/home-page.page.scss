@@ -1,0 +1,211 @@
+.home-content {
+  --background: #f5f5f5;
+}
+
+.header-section {
+  background: linear-gradient(180deg, #5B3FD1 0%, #4A2FB8 100%);
+  padding: 48px 20px 32px 20px;
+  border-radius: 0 0 24px 24px;
+  position: relative;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.greeting-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.balance-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.balance-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: 400;
+}
+
+.balance-amount {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+
+  .decimals {
+    font-size: 28px;
+    opacity: 0.9;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.action-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
+
+.action-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  ion-icon {
+    font-size: 24px;
+    color: white;
+  }
+}
+
+.action-btn:active .action-icon {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.95);
+}
+
+.transactions-section {
+  padding: 24px 20px;
+  padding-bottom: 100px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.transactions-list {
+  background: transparent;
+  padding: 0;
+}
+
+.transaction-item {
+  --background: white;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 0;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  min-height: 72px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.transaction-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+
+  ion-icon {
+    font-size: 22px;
+    color: white;
+  }
+
+  &.walmart-icon {
+    background: #0071CE;
+  }
+
+  &.deposit-icon {
+    background: #6C5CE7;
+  }
+
+  &.netflix-icon {
+    background: #E50914;
+  }
+}
+
+.transaction-info {
+  flex: 1;
+  padding: 8px 0;
+}
+
+.transaction-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.transaction-date {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+  font-weight: 400;
+}
+
+.transaction-amount-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transaction-amount {
+  font-size: 16px;
+  font-weight: 600;
+
+  &.positive {
+    color: #00C48C;
+  }
+
+  &.negative {
+    color: #FF6B6B;
+  }
+}
+
+.chevron-icon {
+  font-size: 18px;
+  color: #ccc;
+}

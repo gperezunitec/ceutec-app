@@ -1,1 +1,100 @@
-<h1>HOLA</h1>
+<ion-content [fullscreen]="true" class="home-content">
+
+  <!-- Purple Header Section -->
+  <div class="header-section">
+
+    <!-- User Greeting -->
+    <div class="user-greeting">
+      <ion-avatar class="user-avatar">
+        <img src="assets/avatar.png" alt="User avatar" />
+      </ion-avatar>
+      <h1 class="greeting-text">Hola Gerardo!</h1>
+    </div>
+
+    <!-- Balance Card -->
+    <div class="balance-card">
+      <p class="balance-label">Tu saldo</p>
+      <h2 class="balance-amount">HNL 14,235<span class="decimals">.34</span></h2>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="action-btn">
+          <div class="action-icon">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+          </div>
+          <span>Recargá</span>
+        </button>
+
+        <button class="action-btn">
+          <div class="action-icon">
+            <ion-icon name="arrow-down-outline"></ion-icon>
+          </div>
+          <span>Retirá</span>
+        </button>
+
+        <button class="action-btn">
+          <div class="action-icon">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+          </div>
+          <span>Transferí</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Transactions Section -->
+  <div class="transactions-section">
+    <h3 class="section-title">Transacciones</h3>
+
+    <ion-list class="transactions-list">
+
+      <!-- Walmart Transaction -->
+      <ion-item lines="none" class="transaction-item" >
+        <div class="transaction-icon walmart-icon">
+          <span>W</span>
+        </div>
+        <div class="transaction-info">
+          <h4 class="transaction-name">Walmart</h4>
+          <p class="transaction-date">Hoy 12:32</p>
+        </div>
+        <div class="transaction-amount-wrapper">
+          <span class="transaction-amount negative">-L 35.23</span>
+          <ion-icon name="chevron-forward-outline" class="chevron-icon"></ion-icon>
+        </div>
+      </ion-item>
+
+      <!-- Depósito Transaction -->
+      <ion-item lines="none" class="transaction-item" >
+        <div class="transaction-icon deposit-icon">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </div>
+        <div class="transaction-info">
+          <h4 class="transaction-name">Depósito</h4>
+          <p class="transaction-date">Ayer 02:12</p>
+        </div>
+        <div class="transaction-amount-wrapper">
+          <span class="transaction-amount positive">+L 430.00</span>
+          <ion-icon name="chevron-forward-outline" class="chevron-icon"></ion-icon>
+        </div>
+      </ion-item>
+
+      <!-- Netflix Transaction -->
+      <ion-item lines="none" class="transaction-item" >
+        <div class="transaction-icon netflix-icon">
+          <span>N</span>
+        </div>
+        <div class="transaction-info">
+          <h4 class="transaction-name">Netflix</h4>
+          <p class="transaction-date">Ago 24 13:53</p>
+        </div>
+        <div class="transaction-amount-wrapper">
+          <span class="transaction-amount negative">-L13.00</span>
+          <ion-icon name="chevron-forward-outline" class="chevron-icon"></ion-icon>
+        </div>
+      </ion-item>
+
+    </ion-list>
+  </div>
+
+</ion-content>
