@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339589029676",
+    "project_id": "proyecto-dm2-70c07",
+    "storage_bucket": "proyecto-dm2-70c07.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339589029676:android:cb9ea14d94ebea8fca1689",
+        "android_client_info": {
+          "package_name": "com.walletapp.ceutec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClGIZaIxFVp_IoGNIH4wvbxJsvBd_nDY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
